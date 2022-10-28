@@ -1,0 +1,134 @@
+<div id="layoutSidenav_content">
+  <main>
+
+    <div class="container-fluid">
+      <h1 class="mt-4"><i class="fas fa-users" style="color: silver"></i> Liste des réservations</h1>
+      <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">
+          Hello M/Mme XXX, il est hh:mm en ce jour du lundi 10 octobre 2022 ?>
+          .
+
+        </li>
+      </ol>
+      <div class=" w-100 row">
+        <div class="col-xl-12">
+          <b>
+            <!-- Nav pills -->
+            <ul class="nav nav-pills" style="float: right;">
+              <li class="nav-item">
+                <a class="btn btn-primary" [routerLink]="['/add-reservations']">
+                  <i class="fas fa-user"></i>
+                  Nouveau réservations
+                </a>
+              </li>
+            </ul>
+          </b>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <hr />
+        </div>
+      </div>
+      <!--                Main Body              -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <input type="text" name="search" class="form-control" (keyup)="searchReservations()" [(ngModel)]="searchBarValue"   style=" float:right; width: 150px; margin-bottom: 10px; margin-right: 20px; ">
+            <table class="table table-border table-striped custom-table mb-0" >
+              <thead>
+              <tr>
+                <th>Libelle</th>
+                <th>Salle</th>
+                <th>Membres</th>
+                <th>Date</th>
+                <th>Options</th>
+              </tr>
+              </thead>
+              <tbody>
+              <ng-container *ngFor="let reserv of reservations" >
+
+
+
+                <tr >
+                  <td><a href="#">{{reserv.nom}}</a>
+                  </td>
+                  <td><img width="28" height="28" src="./assets/assetss/img/user.jpg" class="rounded-circle m-r-5" alt="">
+                    <a href="#"  >
+                      <ng-container *ngFor="let salle of salles" >
+                        <ng-container *ngIf="salle.id == reserv.id_salle" >
+                          {{salle.nom}}
+                        </ng-container  >
+                      </ng-container  >
+                    </a>
+                  </td>
+                  <td><img width="28" height="28" src="./assets/assetss/img/user.jpg" class="rounded-circle m-r-5" alt="">
+                    <a href="#"  >
+                      <ng-container *ngFor="let member of members" >
+                        <ng-container *ngIf="member.id == reserv.id_membre" >
+                          {{member.nom}}
+                        </ng-container  >
+                      </ng-container  >
+                    </a>
+                  </td>
+                  <td><a href="#">{{reserv.date_reserv | date: 'dd/MM/yyyy'}}</a></td>
+                  <td>
+                    <div class="btn-group mr-2" role="group"
+                         aria-label="First group">
+                      <a class="btn btn-primary"
+                         href="#"
+                         title="view"
+                         style="background-color: transparent">
+                        <i style="color: green"
+                           class="fas fa-eye"></i>
+                      </a>
+                    </div>
+                    <div class="btn-group mr-2" role="group"
+                         aria-label="First group">
+                      <a class="btn btn-warning"
+                         [routerLink]="['/update-reservations',reserv.id]"
+                         title="Modifier"
+                         style="background-color: transparent">
+                        <i style="color: orange"
+                           class="fas fa-pen"></i>
+                      </a>
+                    </div>
+                    <div class="btn-group mr-2" role="group"
+                         aria-label="First group">
+                      <a class="btn btn-danger" (click)="deleteReservations(reserv.id)" onclick="Supp(this.href); return(false);"
+                         title="supprimer"
+                         style="background-color: transparent">
+                        <i style="color: red"
+                           class="fas fa-trash"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+
+              </ng-container>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--                End Body              -->
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr />
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+
+<script type="text/javascript">
+  function Supp(link) {
+    if (confirm('Confirmer  la suppression de la réservations ?')) {
+      document.location.href = link;
+    }
+  }
+</script>

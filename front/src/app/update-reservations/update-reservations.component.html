@@ -1,0 +1,104 @@
+<div id="layoutSidenav_content">
+  <main>
+    <div class="container-fluid">
+      <h1 class="mt-4">Modifier reservation: {{reservation.nom}}</h1>
+      <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">
+          Hello M/Mme XXX, il est hh:mm en ce jour du lundi 10 octobre 2022
+          .
+        </li>
+      </ol>
+      <!--                Main Body-->
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="card mb-4">
+            <div class="card-header">
+
+            </div>
+
+            <div class="card-body">
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <!-- Etat Civile-->
+                <!-- infos civile-->
+
+
+                <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                  <div class="row" style="width: 100%}">
+                    <div class="col-lg-8 offset-lg-2">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="nom" >Libelle <span class="text-danger">*</span></label>
+                            <input class="form-control" id="id" type="hidden" name="id"  [(ngModel)]="reservation.id" >
+                            <input class="form-control" id="firstName" type="text" name="nom" [(ngModel)]="reservation.nom" required="required" >
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Salle</label>
+                            <select class="form-control" name="id_salle" [(ngModel)]="reservation.id_salle">
+                              <ng-container *ngFor="let salle of salles" >
+                                <ng-container *ngIf="salle.id == reservation.id_salle" >
+                                  <option value="{{salle.id}}" selected>{{salle.nom}}</option>
+                                </ng-container  >
+                              </ng-container  >
+                              <option *ngFor="let item of salles" value="{{item.id}}">{{item.nom}}</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>Membre</label>
+                            <select class="form-control" name="id_membre" [(ngModel)]="reservation.id_membre">
+                              <ng-container *ngFor="let member of members" >
+                                <ng-container *ngIf="member.id == reservation.id_membre" >
+                                  <option value="{{member.id}}" selected>{{member.nom}}</option>
+                                </ng-container  >
+                              </ng-container  >
+                              <option *ngFor="let items of members" value="{{items.id}}">{{items.nom}}</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="date_reserv">Date</label>
+                            <div>
+                              <input type="date" class="form-control" id="date_reserv" name="date_reserv"  [(ngModel)]="reservation.date_reserv">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="m-t-20 text-center">
+                        <button class="btn btn-primary submit-btn" style="margin-right: 10px;">Enregistrer</button>
+                        <a [routerLink]="['list-reservations']" style=" width:150px;" class="btn btn-danger">
+                          <font>Annuler</font>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+
+
+            </div>
+          </div>
+          <div class="card-footer">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr />
+      </div>
+    </div>
+
+
+  </main>
+</div>
+

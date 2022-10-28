@@ -1,0 +1,250 @@
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
+<!--  <img class="logo" src="assets/logo-epf.png" alt="logo epf" width="100"/>-->
+<!--  <a class="navbar-brand" [routerLink]="['/']">User List</a>-->
+<!--  <a class="navbar-brand" [routerLink]="['/add-user']">Add User</a>-->
+<!--</nav>-->
+<!---->
+
+<!--nav-->
+
+<!--<app-mains></app-mains>-->
+
+<!--<div id="layoutSidenav">-->
+
+<!--  &lt;!&ndash;sidebar&ndash;&gt;-->
+<!--  <div id="layoutSidenav_nav">-->
+<!--    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">-->
+<!--      <div class="sb-sidenav-menu">-->
+<!--        <div class="nav">-->
+<!--          &lt;!&ndash;     <div class="sb-sidenav-menu-heading">Acceuil</div> &ndash;&gt;-->
+<!--          <a class="nav-link " [routerLink]="['/dashboard']">-->
+<!--            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>-->
+<!--            Tableau de Bord-->
+<!--          </a>-->
+<!--          <a class="nav-link collapsed" [routerLink]="['/list-members']" aria-expanded="false"-->
+<!--             aria-controls="pagesCollapseError">-->
+<!--            <div class="sb-nav-link-icon"><i class="fas fa-id-card-alt"></i></div>-->
+<!--            Membres-->
+<!--          </a>-->
+<!--          <a class="nav-link collapsed"[routerLink]="['/list-salles']" aria-expanded="false"-->
+<!--             aria-controls="pagesCollapseError">-->
+<!--            <div class="sb-nav-link-icon"><i class="fas fa-hospital-alt"></i></div>-->
+<!--            Salles-->
+<!--          </a>-->
+
+<!--          <a class="nav-link collapsed" [routerLink]="['/list-events']" aria-expanded="false"-->
+<!--             aria-controls="pagesCollapseError">-->
+<!--            <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>-->
+<!--            Events-->
+<!--          </a>-->
+
+<!--          <a class="nav-link collapsed" [routerLink]="['/list-reservations']" aria-expanded="false"-->
+<!--             aria-controls="pagesCollapseError">-->
+<!--            <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>Reservations-->
+<!--          </a>-->
+
+<!--          <a class="nav-link collapsed" href="#" aria-expanded="false"-->
+<!--             aria-controls="pagesCollapseError">-->
+<!--            <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>Equiepements-->
+<!--          </a>-->
+
+
+
+<!--          &lt;!&ndash;**************************Config***************************&ndash;&gt;-->
+<!--          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages7"-->
+<!--             aria-expanded="false" aria-controls="collapsePages">-->
+<!--            <div class="sb-nav-link-icon"><i class="fas fa-cogs"></i></div>-->
+<!--            Configuration-->
+<!--            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
+<!--          </a>-->
+<!--          <div class="collapse" id="collapsePages7" aria-labelledby="headingOne"-->
+<!--               data-parent="#sidenavAccordion">-->
+
+<!--            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPagess">-->
+<!--              <a class="nav-link collapsed" href="#" data-toggle="collapse"-->
+<!--                 data-target="#pagesCollapseError012" aria-expanded="false"-->
+<!--                 aria-controls="pagesCollapseError">-->
+<!--                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>-->
+<!--                Utilisateurs-->
+<!--                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
+<!--              </a>-->
+<!--              <div class="collapse" id="pagesCollapseError012" aria-labelledby="headingOne"-->
+<!--                   data-parent="#sidenavAccordionPagess">-->
+<!--                <nav class="sb-sidenav-menu-nested nav">-->
+
+<!--                  <a [routerLink]="['/list-users']"-->
+<!--                     class="nav-link">User membre</a>-->
+<!--                  <a href="#"-->
+<!--                     class="nav-link">User Admis</a>-->
+<!--                </nav>-->
+<!--              </div>-->
+<!--            </nav>-->
+
+<!--            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">-->
+<!--              <a class="nav-link collapsed" href="#" data-toggle="collapse"-->
+<!--                 data-target="#pagesCollapseError1" aria-expanded="false"-->
+<!--                 aria-controls="pagesCollapseError">-->
+<!--                <div class="sb-nav-link-icon"><i class="fas fa-list-ul"></i></div>-->
+<!--                Listes Prédéfinies-->
+<!--                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
+<!--              </a>-->
+<!--              <div class="collapse" id="pagesCollapseError1" aria-labelledby="headingOne"-->
+<!--                   data-parent="#sidenavAccordionPages">-->
+<!--                <nav class="sb-sidenav-menu-nested nav">-->
+
+<!--                  <a href="#"-->
+<!--                     class="nav-link">liste A</a>-->
+
+<!--                </nav>-->
+<!--              </div>-->
+
+<!--            </nav>-->
+
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="sb-sidenav-footer">-->
+<!--        <div class="container-fluid">-->
+<!--          <div class="d-flex align-items-center justify-content-between small">-->
+<!--            <div class="text-center">- Copyright &copy; 2022 - MIN</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </nav>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash;dasboard&ndash;&gt;-->
+
+<!-- <router-outlet></router-outlet>-->
+
+<!--</div>-->
+
+<!--script-->
+<!--<app-scriptx></app-scriptx>-->
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <title>Front</title>-->
+<!--  <base href="/">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <link rel="icon" type="image/x-icon" href="favicon.ico">-->
+<!--  &lt;!&ndash; bootstrap &ndash;&gt;-->
+<!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--</head>-->
+<!--<body>-->
+<!--<app-yolo></app-yolo>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<!--sidebar-->
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <!--     <div class="sb-sidenav-menu-heading">Acceuil</div> -->
+            <a class="nav-link" [routerLink]="['']"  >
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+              Tableau de Bord
+            </a>
+            <a class="nav-link collapsed" [routerLink]="['list-members']" aria-expanded="false"
+               aria-controls="pagesCollapseError">
+              <div class="sb-nav-link-icon"><i class="fas fa-id-card-alt"></i></div>
+              Membres
+            </a>
+            <a class="nav-link collapsed" [routerLink]="['list-salles']" aria-expanded="false"
+               aria-controls="pagesCollapseError">
+              <div class="sb-nav-link-icon"><i class="fas fa-hospital-alt"></i></div>
+              Salles
+            </a>
+
+            <a class="nav-link collapsed"  [routerLink]="['list-events']" aria-expanded="false"
+               aria-controls="pagesCollapseError">
+              <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
+              Events
+            </a>
+
+            <a class="nav-link collapsed"  [routerLink]="['list-reservations']" aria-expanded="false"
+               aria-controls="pagesCollapseError">
+              <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>Reservations
+            </a>
+
+            <!--**************************Config***************************-->
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages7"
+               aria-expanded="false" aria-controls="collapsePages">
+              <div class="sb-nav-link-icon"><i class="fas fa-cogs"></i></div>
+              Configuration
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapsePages7" aria-labelledby="headingOne"
+                 data-parent="#sidenavAccordion">
+
+              <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPagess">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                   data-target="#pagesCollapseError012" aria-expanded="false"
+                   aria-controls="pagesCollapseError">
+                  <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                  Utilisateurs
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="pagesCollapseError012" aria-labelledby="headingOne"
+                     data-parent="#sidenavAccordionPagess">
+                  <nav class="sb-sidenav-menu-nested nav">
+
+                    <a
+                       class="nav-link">User membre</a>
+                    <a href="#"
+                       class="nav-link">User Admis</a>
+                  </nav>
+                </div>
+              </nav>
+
+              <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                   data-target="#pagesCollapseError1" aria-expanded="false"
+                   aria-controls="pagesCollapseError">
+                  <div class="sb-nav-link-icon"><i class="fas fa-list-ul"></i></div>
+                  Listes Prédéfinies
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="pagesCollapseError1" aria-labelledby="headingOne"
+                     data-parent="#sidenavAccordionPages">
+                  <nav class="sb-sidenav-menu-nested nav">
+
+                    <a href="#"
+                       class="nav-link">liste A</a>
+
+                  </nav>
+                </div>
+
+              </nav>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-sidenav-footer">
+          <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between small">
+              <div class="text-center">- Copyright &copy; 2022 - MIN</div>
+            </div>
+          </div>
+        </div>
+      </nav>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+
+
